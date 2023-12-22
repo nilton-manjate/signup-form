@@ -1,0 +1,151 @@
+﻿/* Importing font from Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Declaring variables */
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --darkBlue: hsl(249, 10%, 26%);
+  --grayishBlue: hsl(246, 25%, 77%);
+  --poppins: 'Poppins', sans-serif;
+}
+
+/* Reseting the stylesheet */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Body */
+body {
+  background-color: var(--red);
+  background-image: url("images/bg-intro-mobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  font-family: var(--poppins);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  
+}
+
+main, header {
+  width: 320px;
+  text-align: center;
+}
+
+/* Text */
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+header h1 {
+  font-size: 26px;
+}
+
+header p {
+  font-size: 16px;
+}
+
+/* Form */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#try {
+  background-color: var(--blue);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 6px 0px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: white;
+  border-radius: 10px;
+  padding-bottom: 25px;
+  box-shadow: 0 6px 0px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.fill {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 20px 0 20px;
+}
+
+.fill input {
+  padding: 15px 15px 15px 20px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+::-webkit-input-placeholder {
+  font-weight: 700;
+}
+
+.claim input {
+  width: calc(100% - 40px);
+  padding: 10px;
+  background-color: var(--green);
+  color: white;
+  font-family: var(--poppins);
+  font-weight: 500;
+  border: 1px solid rgb(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 0 4px 4px -4px var(--green);
+}
+
+section p {
+  color: var(--grayishBlue);
+  font-size: 11px;
+}
+
+section p a {
+  color: var(--red);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* Media Query for Larger Screens */
+@media only screen and (min-width: 900px) {
+  body {
+    flex-direction: row;
+    background-image: url("images/bg-intro-desktop.png");
+  }
+
+  header {
+    text-align: left;
+    width: 500px;
+  }
+
+  header h1 {
+    font-size: 49px;
+    line-height: 55px;
+  }
+
+  main {
+    width: 500px;
+  }
+
+  br {
+    display: none;
+  }
+}
