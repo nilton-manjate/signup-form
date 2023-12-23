@@ -91,6 +91,28 @@ form {
   margin: 20px 20px 0 20px;
 }
 
+.inFill {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+}
+
+.inFill img {
+  display: none;
+  width: 30px;
+  position: absolute;
+  right: 10px;
+  top: 8px;
+}
+
+span {
+  color: var(--red);
+  font-size: 12px;
+  font-style: italic;
+  text-align: right;
+}
+
 .fill input {
   padding: 15px 15px 15px 20px;
   border: 1px solid lightgray;
