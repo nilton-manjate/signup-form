@@ -135,6 +135,12 @@ span {
   box-shadow: 0 4px 4px -4px var(--green);
 }
 
+.claim input:hover {
+  cursor: pointer;
+  background-color: hsl(154deg 59% 51% / 60%);
+  font-weight: 700;
+}
+
 section p {
   color: var(--grayishBlue);
   font-size: 11px;
