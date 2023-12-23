@@ -24,7 +24,8 @@ send.addEventListener("submit", function(event) {
   if (input[2].value === "") {
     msg[2].innerHTML = "Looks like this is not an email";
     img[2].style.display = "block";
-    input[2].placeholder = "";
+    input[2].value = "example@mail.com";
+    input[2].style.color = "var(--red)";
     input[2].style.borderColor = "var(--red)";
   }
 
@@ -46,12 +47,13 @@ input[1].addEventListener("click", function(){
   msg[1].innerHTML = "";
   img[1].style.display = "none";
 });
+*/
 
 input[2].addEventListener("click", function(){
-  msg[2].innerHTML = "";
-  img[2].style.display = "none";
+  input[2].style.color = "black";
 });
 
+/*
 input[3].addEventListener("click", function(){
   msg[3].innerHTML = "";
   img[3].style.display = "none";
