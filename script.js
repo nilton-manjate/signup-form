@@ -1,11 +1,14 @@
 ﻿"use strict"
 
+// Declaring the variables
 const send = document.getElementById("send");
 const input = document.getElementsByTagName("input");
 const msg = document.getElementsByTagName("span");
 const img = document.getElementsByTagName("img");
 
+// Function to be executed when the user submits the form
 send.addEventListener("submit", function(event) {
+  //If the user try to submit an empty field
   event.preventDefault();
   if (input[0].value === "") {
     msg[0].innerHTML = "First Name cannot be empty";
@@ -35,27 +38,29 @@ send.addEventListener("submit", function(event) {
     input[3].placeholder = "";
     input[3].style.borderColor = "var(--red)";
   }
-});
 
-/*
-input[0].addEventListener("click", function(){
-  msg[0].innerHTML = "";
-  img[0].style.display = "none";
+  // If the user submit the form filled
+  if (input[0].value != "" && input[1] != "" && input[2].value != "" && input[3] != "") {
+     alert("Sucess");
+     msg[0].innerHTML = "";
+     msg[1].innerHTML = "";
+     msg[2].innerHTML = "";
+     msg[3].innerHTML = "";
+     img[0].style.display = "none";
+     img[1].style.display = "none";
+     img[2].style.display = "none";
+     img[3].style.display = "none";
+     input[0].placeholder = "First Name";
+     input[1].placeholder = "Last Name";
+     input[2].placeholder = "Email Adress";
+     input[3].placeholder = "Password";
+     input[0].style.borderColor = "lightgrey";
+     input[1].style.borderColor = "lightgrey";
+     input[2].style.borderColor = "lightgrey";
+     input[3].style.borderColor = "lightgrey";
+     input[0].value = "";
+     input[1].value = "";
+     input[2].value = "";
+     input[3].value = "";
+   }
 });
-
-input[1].addEventListener("click", function(){
-  msg[1].innerHTML = "";
-  img[1].style.display = "none";
-});
-*/
-
-input[2].addEventListener("click", function(){
-  input[2].style.color = "black";
-});
-
-/*
-input[3].addEventListener("click", function(){
-  msg[3].innerHTML = "";
-  img[3].style.display = "none";
-});
-*/
